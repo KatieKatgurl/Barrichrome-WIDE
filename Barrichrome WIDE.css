@@ -1,28 +1,108 @@
-/*Barricade's Lyrania Theme --Barrichrome WIDE*/
+/*Barricade's Lyrania Theme --Barrichrome 2.0 [Lyrania] WIDE*/
 /*to be used OVER the BLACK THEME and MUST be in widescreen mode*/
 /*go to Dropdown Menu > Settings > Display > Use Widescreen Mode > Yes > Refresh > Profit!*/
 
 @namespace url(http://www.w3.org/1999/xhtml);
 
-/*aboss dead screen*/
-html body div#holder div#middlesection.lrow div#main div#content div#contentBoss div div {
-    text-align: center;margin-left: 225px;
+
+/*You have 10 pieces of jewellery equipped out of a total of 10 slots available.*/
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#inventdiv1 font b {
+    text-align: center;
+    color: #f00 !important;
+    margin-left: 5% !important;
 }
-/*Mailbox "You've Got Mail!"*/
-a#unreadmail b {
-    color: #fff;
-    text-shadow: 0px 0px 2px silver;
-    font-weight:bold!important;
+/*Unequipped Jewelry*/
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#inventdiv1 b {
+    color: #0f0 !important; 
 }
-html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div a{
-    font-weight: normal !important;
+/*jade temple top text (hidden), AND apparently fucks up dungeon shop in non-popup ui mode*/
+html body div#holder div#middlesection.lrow div#main div#content div p {
+    display: block !important;
+}
+
+#skills {
+    font-size: 10px;
+    padding: 5px;
+}
+#jewellery {
+    font-size: 12px !important;
+    padding: 5px !important;
+}
+
+/*Inventory selections*/
+ul#inventul {
+    padding-right: 0px;
+}
+#inventul li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: bold !important;
+}
+#inventul li a {
+    text-align: center !important;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
+}
+/*Jewelry*/
+div#inventdiv1 {
+    display: inline-block;
+    padding-right: 0px;
     font-size: 10pt !important;
 }
+/*Maps*/
+div#inventdiv2 {
+    text-align: center !important;
+    padding-right: 0px;
+}
+/*Orbs*/
+div#inventdiv3 {
+    text-align: center !important;
+    padding-right: 0px;
+}
+/*Consumables*/
+div#inventdiv4 {
+    text-align: center !important;
+    padding-right: 0px;
+}
+/*Resources*/
+div#inventdiv5 {
+    text-align: center !important;
+    padding-right: 0px;
+}
+/*Potions*/
+div#inventdiv6 {
+    text-align: center !important;
+    padding-right: 0px;
+}
+/*Misc*/
+div#inventdiv7{
+    text-align: center !important;
+    padding-right: 0px;
+}
+
+/*top right clickables*/
+html body div#holder div.lrow div#header div.lrow div.headerbox.headernav a {
+    font-weight: bold !important;
+}
+.settingsform > label {
+    text-align: center;
+}
+
+.settingsform > label, .settingsform > input[type=password], .settingsform > input[type=text] {
+    width: 50%
+}
+#housing a {
+    font-style: oblique !important;
+    text-decoration: none !important;
+}
+
 /*TRUE widescreen Lyr now :D */
 #holder {
     width: 99.9% !important;
-    /*brushed steel wallpaper*/
-    background-image: url("https://i.imgur.com/9GXrGkY.jpg");
+    background-image: url("https://i.imgur.com/9GXrGkY.jpg") !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: cover !important;
@@ -56,6 +136,25 @@ html body div#holder div#middlesection.lrow div#main div#content div#contentBoss
 /*construction xp bar*/
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#housing div div span div {
     max-width: 210px !important;
+    background: #00000017 !important;
+}
+/*Resources in house*/
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#housing div div {
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
+    font-weight: bold;
+    font-size: 9pt;
+}
+/*non popup ui const xp bar*/
+html body div#holder div#middlesection.lrow div#main div#content div#housing div div span div{
+    max-width: 250px !important;
+}
+html body div#holder div#middlesection.lrow div#main div#content div#housing div div span div div {
+    background: red !important;
+}
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#housing div div span div div {
+    background: silver !important;
+    box-shadow: 0px 0px 1px black inset;
 }
 
 /* Jade Temple */
@@ -65,6 +164,7 @@ span.skillinfo {
     font-style: normal;
     display: inline-block;
     width: 25%;
+    font-size: 10pt;
 }
 
 span.skilltrain {
@@ -106,29 +206,27 @@ div#inventdiv1 {
 #jadereq.crafting-fake-jade-input {
     border: 3px;
     border-style: inset;
-    border-radius: 12px;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #FFF, 0px 0px 1px #FFF, 0px 0px 1px #FFF;
-    background-color: black;
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     font-size: 11pt;
 }
 /* Guild Map Completion Chat Message*/
 html body div#holder div.lrow div#chat div#chatwindow div.chatline span table tbody {
-    color: #0CE300 !important;
-    text-shadow: 0px 0px 3px #90F, 0px 0px 2px #3399ff, 0px 0px 3px #D700FF !important;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 /*scratch card border*/
 div#cardcontainer {
-    background-image: url("https://i.imgur.com/9GXrGkY.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border: 4px;
-    border-style: double;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #FFF, 0px 0px 1px #FFF, 0px 0px 1px #FFF;
+    background-image: url("https://i.imgur.com/9GXrGkY.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
 }
 
 /*players online page*/
@@ -151,6 +249,7 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
     text-align: center;
     margin: auto;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 /*Guild members online*/
@@ -172,6 +271,7 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
     text-align: center;
     margin: auto;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 /*Regular players online*/
@@ -181,46 +281,53 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
     background-position: center;
     background-size: cover;
     font-size: 20px;
-    color: #3399ff !important;
-    text-shadow: 0px 0px 3px #ff00ff !important;
+    color: #fff !important;
+    text-shadow: 0px 0px 2px #f00, 0px 0px 2px #f00, 0px 0px 2px #f00 !important;
     font-weight: normal;
     border-radius: 12px;
-    border: white 5px;
+    border: 5px;
     border-style: double;
-    border-color: #3399ff !important;
-    box-shadow: 0px 0px 3px #ff00ff inset !important;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
     width: 75px;
     text-align: center;
     margin: auto;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 /*autos remaining*/
 div.lrow div.flex-content div.lrow div.strong.text-center.flex {
-    /*padding-left: 184px; /*100% screensize*/
+    /*padding-left: 183px; /*100% screensize*/
     padding-left: 190px;
     /*90% screensize*/
     /*text-decoration: underline #0051FF;*/
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     font-style: oblique;
     font-weight: normal;
 }
-
+/*Restarting... Autos*/
+div#stopauto.text-center.flex {
+    margin-top: 0px;
+    font-size: 12pt !important;
+    color: #EEE;
+    text-shadow: 0px 0px 1px #F00, 0px 0px 1px #F00, 0px 0px 1px #F00;
+}
 /*dungeon autos remaining*/
 html body div#holder div#middlesection.lrow div#main div#content div.lrow div.flex-content div.strong.text-center {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     font-style: oblique;
     font-weight: normal;
 }
 
 /*Action Timer*/
 #timer {
-    font-family: "lcd";
+    font-family: "lcd", "Calibri" !important;
     font-size: 14pt;
     color: #fff !important;
-    text-shadow: 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black;
+    text-shadow: 0px 0px 1px silver !important;
     padding-top: 0px;
     font-weight: normal !important;
     text-decoration: none !important;
@@ -228,27 +335,63 @@ html body div#holder div#middlesection.lrow div#main div#content div.lrow div.fl
 
 /*battle names/hp*/
 div.battleContainer.lrow.margin-bottom-10 {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
-    font-weight: normal;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 /*House Rooms*/
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#housing div#roomlist {
-    margin-left: 25px;
-    margin-top: -10px;
+    background: #000000a6;
+    max-width: 700px !important;
+    height: auto !important;
+    margin-top: 1% !important;
+    margin-bottom: -3% !important;
+    padding-bottom: 1% !important;
+    margin-left: 25px !important;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    text-align: left !important;
+}
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#housing div#roomlist p {
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
+    font-size: 12pt;
+    background: #1c0000 !important;
+    max-width: 050px !important;
+    margin-top: 1% !important;
+    margin-left: 295px;
+    border-radius: 12px;
+    text-align: center !important;
+    padding-left: 25px;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+}
+/*non-popup ui mode room list*/
+html body div#holder div#middlesection.lrow div#main div#content div#housing div#roomlist {
+    margin-top: 1% !important;
 }
 /* Room item counts */
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#housing div#roomlist div span {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
+}
+
+/*house rooms "Rooms"*/
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#housing div#roomlist p {
+    text-align: center;
+    padding-right: 25px;
 }
 
 /*profile shit*/
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#profileinfo {
-    background-image: url("https://i.imgur.com/9GXrGkY.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url("https://i.imgur.com/9GXrGkY.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border: double 3px silver !important;
 }
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#profileinfo div#profile_data,
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#profileinfo div#profile_data div,
@@ -265,61 +408,132 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
 }
 /*Profile pic background*/
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#profilepic {
-    background-image: url("https://i.imgur.com/9GXrGkY.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-image: url("https://i.imgur.com/9GXrGkY.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border: double 3px silver !important;
 }
-/*profile pic selections*/
-img[src*="a0.jpg"] {
-    width: 0px;
-    padding-left: 180px;
-    padding-top: 0px;
-    background-image: url("https://screenshotscdn.firefoxusercontent.com/images/1645420c-90ab-4348-9ed0-e0f5ad54441c.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-size: 300%;
-    border: double 6px #570000;
-    box-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
-    border-radius: 12px;
-    border-width: 8px;
-    margin: 1.5%;
-    /*or cover*/
-}
-img[src*="a1.jpg"] {
-    width: 0px;
-    height: 210px;
-    padding-left: 180px;
-    padding-top: 35px;
-    background-image: url("https://www.thatshotstore.com.au/media/catalog/product/cache/1/image/650x/040ec09b1e35df139433887a97daa66f/2/_/2_1.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border: double 6px #6F00FF;
-    box-shadow: 0px 0px 5px black, 0px 0px 5px black, 0px 0px 5px black;
-    border-radius: 12px;
-}
+
 /*text area on profile*/
 #bio {
     width: 490px;
     height: 100px;
     text-align: center;
     background: #00000000;
-    color: #fff;
-    text-shadow: 0px 0px 1px silver, 0px 0px 1px silver, 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     border: none;
     position: relative;
 }
 
 #chat {
-    background-color: #00000025;
+    background-color: #00000050;
     border: 3px;
     border-style: inset;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #FFF, 0px 0px 1px #FFF, 0px 0px 1px #FFF;
-    border-radius: 0px 0px 12px 12px;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
 }
+/* Players names in chat */
+.chatname {
+    color: #f00 !important;
+    text-shadow: 1px 1px 2px #000, 1px 1px 2px #000, 1px 1px 2px #000 !important;
+}
+
+/* Admin chat text color */
+.admincolour {
+    color: #FF0000 !important;
+    text-shadow: 1px 1px 2px #000, 1px 1px 2px #000, 1px 1px 2px #000 !important;
+}
+
+/*chat buttons*/
+input#mainchatbutton,
+input#tradechatbutton,
+input#auctionchatbutton,
+input#globalschatbutton,
+input#areachatbutton,
+input#pubchatbutton,
+input#litechatbutton {
+    border: 3px ridge !important;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
+    height: 20px !important;
+    margin-left: 0px !important;
+    cursor: pointer;
+    width: 20px !important;
+}
+/* Chat */
+#chatwindow {
+    margin-top: .8%;
+    font-size: 10pt !important;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
+    background-color: #00000000 !important;
+    color: #FFF !important;
+    text-shadow: 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black;
+    min-height: 5px !important;
+    /*border-color: #FFF;
+    box-shadow: 0px 0px 1px #FFF, 0 0 2px #FFF, 0 0 7px #FFF;*/
+}
+
+
+
+/* Chat Text Input Windows */
+#inputchat {
+    width: 60% !important;
+    position: relative !important;
+    font-size: 10pt !important;
+    text-indent: 3px !important;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
+    background-color: #00000000!important;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
+    text-align: left;
+    font-weight: normal;
+    padding-left: 10px !important;
+}
+
+/*chat send button*/
+html body div#holder div.lrow div#chat input#chatbutton {
+    /*background-image: url("https://i.imgur.com/9GXrGkY.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
+    background: black !important;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 1px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Chat Channel Selector */
+#chatchannel {
+    background-color: #000 !important;
+    border: 3px inset !important;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 1px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
+    text-align: center;
+    font-size: 10pt !important;
+    cursor: pointer;
+}
+
 
 
 
@@ -333,9 +547,9 @@ body {
 #popuprescontainer {
     border: 3px;
     border-style: inset;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF;
-    border-radius: 12px 12px 12px 12px;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
     background-color: black;
 }
 
@@ -345,8 +559,8 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
 }
 /*purchase/spend tokens response*/
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popupresponse {
-    color: #EAFF00;
-    text-shadow: 0px 0px 3px #FF6200, 0px 0px 3px #FF4100, 0px 0px 3px #F00;
+    color: #fff !important;
+    text-shadow: 0px 0px 3px #f00, 0px 0px 3px #f00, 0px 0px 3px #f00 !important;
     font-size: 14pt;
 }
 
@@ -357,9 +571,9 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
     background-color: #00000000 !important;
     border: 3px;
     border-style: inset;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #FFF, 0px 0px 1px #FFF, 0px 0px 1px #FFF;
-    border-radius: 0px 0px 0px 0px;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px 0px 0px 12px;
     text-align: left;
     color: #FFF;
 }
@@ -369,27 +583,26 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
     background-color: #00000000 !important;
     border: 3px;
     border-style: inset;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #FFF, 0px 0px 1px #FFF, 0px 0px 1px #FFF;
-    border-radius: 0px 0px 0px 0px;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 0px 12px 12px 0px;
     text-align: right;
     color: #FFF;
 }
 
 #main {
-    background-color: #00000000;
+    background-color: #00000050;
     /*resize: vertical;
     overflow: auto;*/
     font-weight: normal;
-    padding-top: 1px;
+    padding-top: 0px;
     height: 380px;
     width: 50%;
     border: 3px;
     border-style: inset;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #FFF, 0px 0px 1px #FFF, 0px 0px 1px #FFF;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
     color: #FFF;
-    /*border-radius: 0px 0px 0px 0px;*/
     font-size: 10pt !important;
     /*color: #FF00ff !important;*/
     text-align: center !important;
@@ -398,55 +611,45 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
 
 /* Header Bar All Information */
 #header {
-    height: auto;
     position: relative !important;
     text-align: left !important;
-    border-radius: 12px 12px 0px 0px;
     border: 3px;
     border-style: inset;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #FFF, 0px 0px 1px #FFF, 0px 0px 1px #FFF;
-    color: #FFF;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
+    color: #fff;
     background-color: #00000000;
+    font-weight: normal !important;
 }
 
 
 select,
 button,
 input {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
-    border-radius: 12px !important;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     background-color: black;
     font-size: 10pt !important;
-    border: 2px inset;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #000, 0px 0px 2px #FFF, 0px 0px 7px #000;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
     text-align: center;
 }
 
-#popupnav {
-    padding-right: 550px;
-    text-align: right;
-    background-color: black;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-/*Select Pet Menu*/
-select#Pet {
-margin-right: 25% !important;
-}
 
 /* Dropdown Selector */
 #mainnav {
     background-color: #000 !important;
-    box-shadow: 0px 0px 1px #000, 0 0 2px #FFF, 0 0 7px #000;
-    border-radius: 12px;
+    border: 3px;
     border-style: inset;
-    border-color: silver;
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     text-align: center;
     position: relative !important;
     padding: 0px 0px 0px 0px !important;
@@ -465,9 +668,11 @@ margin-right: 25% !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border: 3px inset !important;
-    border-color: #FFF !important;
-    box-shadow: 0px 0px 2px silver, 0px 0px 2px silver, 0px 0px 2px silver  inset !important;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
     text-align: center !important;
     width: auto !important;
 }
@@ -476,131 +681,183 @@ margin-right: 25% !important;
 #updatecount {
     font-size: 10pt  !important;
     color: #fff !important;
-    text-shadow: 1px 1px 2px #000, 1px 1px 2px #000, 1px 1px 2px #000 !important;
-    font-weight: bold;
+    text-shadow: 0px 0px 1px silver !important;
+    font-weight: normal !important;
+}
+/*older updates*/
+div.panel-heading a {
+    color: red;
+    font-size: 12pt;
 }
 .panel {
-    border-radius: 12px;
-    border: silver 4px;
-    border-style: double;
+    border: 3px;
+    border-style: inset;
     border-color: silver !important;
-    box-shadow: 0px 0px 1px white,0px 0px 1px white,0px 0px 1px white inset !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
+    margin-left: 2% !important;
+}
+/*header text*/
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div div.panel div.panel-heading {
+    font-size: 12pt  !important;
+    font-weight: normal !important;
+    text-align: center !important;
+    color: #fff !important;
+    text-shadow: 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000 !important;
+    
 }
 div.panel-body hr,
 div.panel-heading hr {
-     border-radius: 12px;
-    border: white 1px;
-    border-style: double;
-    border-color: white !important;
-    box-shadow: 0px 0px 1px silver inset !important;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
 }
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div div.panel div.panel-body {
     background: black !important;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     text-align: left !important;
 }
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div div.panel div.panel-heading{
     background-color: #1c1c1c !important;
     border-radius: 7px 7px 0px 0px !important;
 }
+/*non-popup ui log*/
+html body div#holder div#middlesection.lrow div#main div#content div div.panel div.panel-heading.text-center {
+    color: #fff !important;
+    text-shadow: 0px 0px 2px #000, 0px 0px 2px #000, 0px 0px 2px #000 !important;
+    background-color: #1c1c1c !important;
+    border-radius: 7px 7px 0px 0px !important;
+    border: hidden !important;
+}
+/*non-pop up ui panel background*/
+html body div#holder div#middlesection.lrow div#main div#content div div.panel div.panel-body {
+    background: #00000091 !important;
+    text-align: left !important;
+}
 /*-----------------------------------------------------------------------*/
 #onlinecount {
     font-size: 10pt;
     color: #fff !important;
-    text-shadow: 1px 1px 2px #000, 1px 1px 2px #000, 1px 1px 2px #000 !important;
+    text-shadow: 0px 0px 1px silver !important;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
 }
 #goldli span[style*="color"] {
     color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #eqgold span[style*="color"] {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #jadeli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #emeraldsli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #emeraldsli2 {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #opalsli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #opalsli2 {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #rubiesli {
-   color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #rubiesli2 {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #sapphiresli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #sapphiresli2 {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #diamondsli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #diamondsli2 {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #expli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #glvlli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #glvlpercent {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #lvlli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #tokenli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #gnameli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #healthli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #attackli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #defenceli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #Accuracyli {
-   color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #evasionli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #petli {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver, 0px 0px 1px silver !important;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #guildli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #rankli {
-    color: #fff;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 .headerbox {
-    font-size: 12px;
-    font-family: "Calibri";
+    font-family: "Calibri" !important;
 }
 #header > div.lrow > div:nth-child(1) > a {
     padding-left: 16px;
+    color: #fff !important;
+    font-weight: normal !important;
 }
 #lvlli {
     padding-left: 20px;
@@ -609,7 +866,7 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
     padding-left: 28px;
 }
 #guildli {
-    padding-left: 4px;
+    padding-left: 3px;
 }
 #petli {
     padding-left: 0px;
@@ -619,7 +876,7 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
     text-align: right;
 }
 #eqgold {
-    padding-left: 17px;
+    padding-left: 18px;
 }
 #jadeli {
     padding-left: 23px;
@@ -665,13 +922,14 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
 /* Minor tweaks to colors etc */
 [style*="color:#222233;"],
 [style="color:#000000;"] {
-    color: #FFF !important;
+    color: #fff !important;
 }
 
 
 /*changes your name in the global message to a more visible color */
 span[style*="color: #33CCFF"][href*="Barricade"] * {
-    color: #fff !important;
+    color: #3399ff !important;
+    text-shadow: 0px 0px 3px #ff00ff !important;
 }
 span[style*="font-weight"] {
     font-weight: normal !important;
@@ -684,26 +942,40 @@ span[style*="font-weight"] {
     font-size: 10pt !important;
     text-align: left;
 }
+
 #unreadmail {
     font-size: 10pt !important;
     text-align: left;
+    padding-bottom: 50px;
 }
+/*Mailbox "You've Got Mail!"*/
+a#unreadmail b {
+    color: #EAFF00;
+    text-shadow: 0px 0px 2px #FF6200, 0 0 2px #FF4100, 0 0 2px #F00;
+    font-weight: normal !important;
+    font-size: 12pt !important;
+}
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div a{
+    font-weight: normal !important;
+}
+
 #questtracker {
     font-size: 10pt !important;
     text-align: left;
 }
 #sidecounter {
     text-align: left !important;
+    font-size: 10pt;
 }
 #killscount {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     font-size: 10pt !important;
     text-align: left;
 }
 #questupdateid {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     font-size: 10pt !important;
     text-align: left;
 }
@@ -715,22 +987,24 @@ span[style*="font-weight"] {
 
 /* Quests */
 #questcount {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     font-size: 10pt !important;
     text-align: left;
 }
+/*new quest bitch*/
 html body div#holder div#middlesection.lrow div#side1 div#questtracker a span#questupdateid font {
-    color: red;
-    text-shadow: 0px 0px 1px #000, 0px 0px 1px #000, 0px 0px 1px #000 !important;
+    color: #EAFF00 !important;
+    text-shadow: 0px 0px 2px #FF6200, 0 0 2px #FF4100, 0 0 2px #F00 !important;
     font-weight: bold;
+    text-decoration: underline !important;
 }
 
 
 /* PTicket */
 #ticketcount {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     font-size: 10pt !important;
     text-align: left;
 }
@@ -739,8 +1013,8 @@ html body div#holder div#middlesection.lrow div#side1 div#questtracker a span#qu
 /* Equipment Panel */
 #equip1,
 #equip2 {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 #equip3,
 #equip4,
@@ -749,14 +1023,16 @@ html body div#holder div#middlesection.lrow div#side1 div#questtracker a span#qu
 #equip7,
 #equip8,
 #equip9 {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 
 /*equipment names*/
 #equipment p.equipment {
-    text-align: center;
-    margin: 0;
+    text-align: right !important;
+    margin-right: 27.5% !important;
+    position: relative !important;
+    max-width: 100%;
 }
 #equipment {
     text-align: center !important;
@@ -766,11 +1042,15 @@ html body div#holder div#middlesection.lrow div#side1 div#questtracker a span#qu
 #equipment > H3 {
     text-align: center !important;
     font-size: 12pt !important;
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 
-
+/*not enough money lol*/
+html body div#holder div#middlesection.lrow div#side2 div#equipstuff b {
+    color: #EAFF00 !important;
+    text-shadow: 0px 0px 2px #FF6200, 0 0 2px #FF4100, 0 0 2px #F00 !important;
+}
 /* Equipment costs subscreen */
 #equipstuff {
     position: relative !important;
@@ -779,18 +1059,18 @@ html body div#holder div#middlesection.lrow div#side1 div#questtracker a span#qu
     top: 0px !important;
     text-align: center;
     font-size: 10pt !important;
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 /*equipment lines*/
 html body div#holder div#middlesection.lrow div#side2 div#equipment hr,
 html body div#holder div#middlesection.lrow div#side2 hr {
     width: 60%;
-    border: 2px;
+    border: 3px;
     border-style: inset;
+    border-color: #fff !important;
+    box-shadow: 0px 0px 1px silver, 0px 0px 2px silver, 0px 0px 1px silver !important;
     border-radius: 12px;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #FFF, 0px 0px 1px #FFF, 0px 0px 1px #FFF;
 }
 
 /* Current TS Jobs: */
@@ -800,7 +1080,10 @@ html body div#holder div#middlesection.lrow div#side2 hr {
     font-size: 12pt !important;
     padding-bottom: 35px;
 }
-
+html body div#holder div#middlesection.lrow div#side1 div#tstimer b {
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
+}
 
 /* Current TS Jobs: Timers */
 #tsjob1,
@@ -811,35 +1094,48 @@ html body div#holder div#middlesection.lrow div#side2 hr {
     position: relative !important;
 }
 
-
 /* TS colors */
 #ts1,
 #ts2,
 #ts3,
 #ts4 {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+   color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     font-size: 10pt !important;
     text-align: left;
 }
 /*TS Timers 00:00*/
 html body div#holder div#middlesection.lrow div#side1 div#tstimer span#tsjob3 span#ts3 a {
-    color: #FFF !important;
-    text-shadow: 0px 0px 1px #F00, 0px 0px 1px #F00, 0px 0px 1px #F00 !important;
+    color: #fff !important;
+    text-shadow: 0px 0px 2px #FF6200, 0 0 2px #FF4100, 0 0 2px #F00 !important;
 }
 html body div#holder div#middlesection.lrow div#side1 div#tstimer span#tsjob1 span#ts1 a {
-    color: #FFF !important;
-    text-shadow: 0px 0px 1px #F00, 0px 0px 1px #F00, 0px 0px 1px #F00 !important;
+    color: #fff !important;
+    text-shadow: 0px 0px 2px #FF6200, 0 0 2px #FF4100, 0 0 2px #F00 !important;
 }
 html body div#holder div#middlesection.lrow div#side1 div#tstimer span#tsjob2 span#ts2 a {
-    color: #FFF !important;
-    text-shadow: 0px 0px 1px #F00, 0px 0px 1px #F00, 0px 0px 1px #F00 !important;
+    color: #fff !important;
+    text-shadow: 0px 0px 2px #FF6200, 0 0 2px #FF4100, 0 0 2px #F00 !important;
 }
 html body div#holder div#middlesection.lrow div#side1 div#tstimer span#tsjob4 span#ts4 a {
-    color: #FFF !important;
-    text-shadow: 0px 0px 1px #F00, 0px 0px 1px #F00, 0px 0px 1px #F00 !important;
+    color: #fff !important;
+    text-shadow: 0px 0px 2px #FF6200, 0 0 2px #FF4100, 0 0 2px #F00 !important;
 }
 
+/*tradeskills popup ui*/
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#tskills,
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#tresources,
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#tjobs {
+   margin-left: 100px; 
+    text-align: left;
+}
+/*tradeskills non popup ui*/
+html body div#holder div#middlesection.lrow div#main div#content div#tskills,
+html body div#holder div#middlesection.lrow div#main div#content div#tresources,
+html body div#holder div#middlesection.lrow div#main div#content div#tjobs{
+    padding-left:175px;
+    text-align: left;
+}
 /* House countdown (construction) */
 #side1[style="font-size:13px;margin-left:5px;"] {
     font-size: 10pt !important;
@@ -850,16 +1146,17 @@ html body div#holder div#middlesection.lrow div#side1 div#tstimer span#tsjob4 sp
 /* House Timer Color */
 #housetimer {
     font-size: 10pt !important;
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
 }
 
 /*00:00 time*/
 html body div#holder div#middlesection.lrow div#side1 span span#housetimer a b {
-    color: #E3E3E3;
-    text-shadow: 0 0 1px #F00, 0 0 1px #F00, 0 0 1px #F00;
+    content: "build me!";
+   color: #fff !important;
+    text-shadow: 0px 0px 2px #FF6200, 0 0 2px #FF4100, 0 0 2px #F00 !important;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
@@ -870,95 +1167,6 @@ html body div#holder div#middlesection.lrow div#side1 span span#housetimer a b {
 }
 
 
-
-/* Players names in chat */
-.chatname {
-    color: #fff !important;
-}
-
-/* Admin chat text color */
-.admincolour {
-    color: #FF0000 !important;
-}
-
-/*chat buttons*/
-input#mainchatbutton,
-input#tradechatbutton,
-input#auctionchatbutton,
-input#globalschatbutton,
-input#areachatbutton,
-input#pubchatbutton,
-input#litechatbutton {
-    border: 3px silver !important;
-    border-radius: 12px 12px 12px 12px;
-    border-style: ridge !important;
-    border-color: silver !important;
-    box-shadow: 0px 0px 1px #000, 0 0 1px #000, 0 0 1px #000 inset !important;
-    height: 20px !important;
-}
-/* Chat */
-#chatwindow {
-    margin-top: .8%;
-    font-size: 10pt !important;
-    border: 3px;
-    border-style: ridge;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #fff, 0px 0px 1px #fff, 0px 0px 1px #fff !important;
-    border-radius: 12px 12px 12px 12px;
-    background-color: #00000025 !important;
-    color: #FFF !important;
-    text-shadow: 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black;
-    /*border-color: #FFF;
-    box-shadow: 0px 0px 1px #FFF, 0 0 2px #FFF, 0 0 7px #FFF;*/
-}
-
-
-
-/* Chat Text Input Windows */
-#inputchat {
-    width: 900px !important;
-    position: relative !important;
-    font-size: 10pt !important;
-    text-indent: 4px !important;
-    border: 2px;
-    border-style: inset;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #FFF, 0 0 1px #FFF, 0 0 1px #FFF;
-    border-radius: 0px 0px 12px 12px;
-    background-color: #00000000 !important;
-    color: #0CE300 !important;
-    text-shadow: 0px 0px 1px black, 0 0 3px #3399ff, 0 0 5px #f0f;
-    text-align: left;
-    font-weight: normal;
-}
-
-/*chat send button*/
-html body div#holder div.lrow div#chat input#chatbutton {
-    /*background-image: url("https://i.imgur.com/9GXrGkY.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;*/
-    background: black !important;
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #000, 0px 0px 2px #FFF, 0px 0px 7px #000;
-    border-style: inset;
-    text-align: center;
-}
-
-/* Chat Channel Selector */
-#chatchannel {
-    border-style: inset;
-    background-color: #000 !important;
-    border-radius: 12px;
-    border-color: silver;
-    box-shadow: 0px 0px 1px #000, 0px 0px 2px #FFF, 0px 0px 7px #000;
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
-    text-align: center;
-    font-size: 10pt !important;
-}
 
 
 /*dungeon fight button*/
@@ -973,59 +1181,63 @@ html body div#holder div#middlesection.lrow div#main div#content div#rightinfo i
 #profile_data {
     padding-top: 6px;
     text-align: center !important;
-    font-size: 12pt !important;
     color: #FFF !important;
-    border-radius: 12px;
-    
+    border: none !important;
+     font-size: 12pt !important;
 }
-
 /*Profile Info*/
 #show_info,
 #show_stats,
 #show_staff  {
-    background-color: #1a1a1a !important;
     text-align: center;
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
-    font-size: 12pt !important;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
     border-radius: 12px;
+    background-color: black;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
+    font-size: 12pt !important;
     margin-left: 34%;
     cursor: pointer;
 }
-
-[href="javascript:closepage();"] {
-    font-weight: normal;
+#show_info:hover,
+#show_stats:hover,
+#show_staff:hover {
+     font-size: 12pt !important;
+    color: #fff !important;
+    text-shadow: 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black !important;
+    background-color: #a00 !important;
+    text-align: center;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
 }
-[href="javascript:closepage();"]:hover {
-    color: #FFF !important;
-}
-
-
 
 /*bulk color text (fix colors when stylish gets updated)*/
 body {
     background-color: #323232 !important;
     color: white;
     text-shadow: 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black;
-    font-weight: normal !important;
 }
 a {
     color: white;
     text-shadow: 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black;
-    text-decoration: none !important;
-    font-weight: normal !important;
 }
 a:hover {
-    color: #F00;
-    text-shadow: 0px 0px 1px black;
+    color: #fff !important;
+    text-shadow: 0px 0px 3px silver !important;
 }
 
 /* Mob Drop Banner Pop-up */
 #bannerholder {
     top: 27px !important;
     border: none !important;
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     padding: 0px !important;
     border-radius: 12px !important;
     background: black !important;
@@ -1035,7 +1247,7 @@ a:hover {
 }
 
 #bannerholder > span > a > font:hover {
-    border: solid 1px #ff00ff !important;
+    border: solid 1px #000 !important;
     color: #ff00ff !important;
 }
 /*banner close button hidden*/
@@ -1051,8 +1263,8 @@ html body div#holder div#middlesection.lrow div#main div#bannerholder div a font
 /* Dungeon completion table */
 /*Themed Table Results*/
 #banner>table {
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
     text-align: center;
     padding: 1px !important;
     background-color: #000;
@@ -1061,8 +1273,8 @@ html body div#holder div#middlesection.lrow div#main div#bannerholder div a font
     background-position: center;
     background-size: cover;*/
     border: 1px inset !important;
-    border-color: #FFF !important;
-    box-shadow: 0px 0px 2px silver, 0px 0px 2px silver, 0px 0px 2px silver  inset !important;
+    border-color: #fff !important;
+    box-shadow: 0px 0px 2px silver, 0px 0px 2px silver, 0px 0px 2px silver inset !important;
     font-weight: normal;
     font-size: 11pt;
     margin-top: 280px !important;
@@ -1074,7 +1286,7 @@ html body div#holder div#middlesection.lrow div#main div#bannerholder div a font
     width: auto !important;
     border: 2px inset !important;
     border-color: #fff !important;
-    box-shadow: 0px 0px 2px silver, 0px 0px 2px silver, 0px 0px 2px silver  inset !important;
+    box-shadow: 0px 0px 2px silver, 0px 0px 2px silver, 0px 0px 2px silver inset !important;
     margin-left: 25% !important;
 }
 /* -- End Dungeon layout -- */
@@ -1100,6 +1312,37 @@ html body div#holder div#middlesection.lrow div#main div#bannerholder div a font
   padding: 0px !important;
 }*/
 /* -- End Dungeon layout -- */
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*New Map Tier Upgrade Option - Only on Dev Server at the moment*/
+/*Upgrade Map Tier*/
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div table tbody tr td a.action-link {
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
+}
+/*Tier 1,2,3,4,5......*/
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div table tbody tr td strong {
+    color: #f00;
+    font-size: 13pt !important;
+}
+/*Name, Quantity, Actions*/
+#popup > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) {
+    color: #f00;
+    font-size: 14pt;
+    text-align: center !important;
+}
+#popup > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(2) {
+    color: #f00;
+    font-size: 14pt;
+    text-align: center !important;
+}
+#popup > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(3) {
+    color: #f00;
+    font-size: 14pt;
+    text-align: center !important;
+}
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Dungeon completion table */
@@ -1156,29 +1399,90 @@ div[style*="border-style:solid;border-width:1px;border-color:#660066"] img {
 #popupcontainer div {
     background-color: #000;
     border-radius: 12px;
-    text-align: center;
     color: #fff;
     resize: vertical !important;
     font-size: 9pt;
 }
 #popuptopbar {
     background-color: #323232;
-    border-radius: 12px 12px 0px 0px;
-    border-color: #fff;
-    box-shadow: 0px 0px 1px #FFF, 0 0 2px #FFF, 0 0 7px #FFF;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
 }
 #popup {
-    padding-top: 25px;
     background-color: #000;
     font-size: 12px;
+    padding-left: 0px !important;
+    margin-top: 5px;
+    height: auto !important;
 }
 #popupnav {
-    text-align: center;
-    color: white;
-    margin-top: 1px;
-    padding-right: 25px;
-    width: 700px;
+    width: 200px !important;
+    margin-left: 150% !important;
+    text-align: center !important;
+    margin-top: 0px !important;
 }
+/*menu for log*/
+ /*#popupholder select#filter { 
+     margin-top: 25px !important; 
+}*/
+/*#popupnav {
+    padding-right: 550px;
+    text-align: right;
+    background-color: black;
+}*/
+
+/*Select Pet Menu*/
+select#Pet {
+    margin-right: 20% !important;
+}
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div.lrow div.flex-content div.lrow div.flex div#profileinfo {
+    margin-top: 25px;
+}
+
+/*popup close button*/
+[href="javascript:closepage();"] {
+    color: silver !important;
+    text-shadow: 0px 0px 1px #fff !important;
+    font-weight: normal;
+    font-size: 12pt !important;
+    text-align: center;
+    border: 3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px 7px 0px 12px;
+    height:18px !important;
+    width: 60px !important;
+    float: right !important;
+    padding-bottom: 3px !important;
+    margin-top: -3px;
+    margin-right: -5% !important;
+    cursor: pointer;
+}
+[href="javascript:closepage();"]:hover {
+    color: #fff !important;
+    text-shadow: 0px 0px 1px #000 !important;
+    background: #700 !important;
+    font-weight: normal !important;
+    font-size: 12pt !important;
+    text-align: center;
+    border: 3px inset !important;
+    border-radius: 12px 7px 0px 12px;
+    border-color: #fff !important;
+    box-shadow: 0px 0px 3px silver, 0px 0px 3px silver, 0px 0px 3px silver inset !important;
+    height:18px !important;
+    width: 60px !important;
+    float: right !important;
+    padding-bottom: 3px !important;
+    text-decoration: none !important;
+    margin-top: -3px;
+    cursor: pointer;
+}
+
+
 tbody {
     color: white;
 }
@@ -1198,17 +1502,14 @@ table#milestonestable th {
     border: none;
 }
 
-/*jade temple top text (hidden)*/
-html body div#holder div#middlesection.lrow div#main div#content div p {
-    display: none;
-}
 
+ 
 table#milestonestable {
     border-collapse: collapse;
     display: inline-block;
     background-color: #00000075;
     border-radius: 12px;
-    border: 4px;
+    border: 3px;
     border-style: double;
     margin-left: 15px;
 }
@@ -1230,32 +1531,32 @@ table#milestonestable th {
 /*Rankings Page*/
 a#ranking {
     font-size: 11pt;
-    color: #fff;
-    text-shadow: 0px 0px 1px silver;
-    text-decoration: none; 
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver !important;
+    text-decoration: none;
     border: 3px;
-    border-style: ridge;
-    border-color: #fff;
-    box-shadow: 0px 0px 1px #fff, 0 0 1px #fff, 0 0 1px #fff !important;
-    padding: 2px 2px; 
-    text-align: center; 
-    display: inline-block; 
+    border-style: inset;
+    border-color: #fff !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    padding: 2px 2px;
+    text-align: center;
+    display: inline-block;
     margin-bottom: 2px;
     background-color: #606060;
 }
 
 a#ranking-selected {
-    color:#fff; 
-    text-shadow: 0px 0px 1px #f00, 0px 0px 1px #f00, 0px 0px 1px #F00;
-    text-decoration: none; 
+    color: #fff !important;
+    text-shadow: 0px 0px 1px silver, 0px 0px 1px silver, 0px 0px 1px silver !important;
+    text-decoration: none;
     font-size: 11pt;
-    border:3px;
+    border: 3px;
     border-style: inset;
-    border-color: #eee;
-    box-shadow: 0px 0px 3px #f00, 0px 0px 3px #f00, 0px 0px 3px #F00 inset !important;
-    padding: 2px 2px; 
-    text-align: center; 
-    display: inline-block; 
+    border-color: #fff !important;
+    box-shadow: 0px 0px 1px silver, 0px 0px 2px silver, 0px 0px 1px silver !important;
+    padding: 2px 2px;
+    text-align: center;
+    display: inline-block;
     margin-bottom: 2px;
     background-image: url("https://i.imgur.com/9GXrGkY.jpg");
     background-repeat: no-repeat;
@@ -1264,18 +1565,27 @@ a#ranking-selected {
 }
 
 a:hover#ranking {
-    color: #EAFF00;
-    text-shadow: 0px 0px 1px #FF6200, 0px 0px 1px #FF4100, 0px 0px 1px #F00;
+    color: #EAFF00 !important;
+    text-shadow: 0px 0px 1px #FF6200, 0px 0px 1px #FF4100, 0px 0px 1px #F00 !important;
     background-color: #606060 !important;
     border:3px;
     border-style: inset;
-    border-color: #fff;
-    box-shadow: 0px 0px 3px silver, 0px 0px 3px silver, 0px 0px 3px silver inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
 }
 
 
-/*house rooms "Rooms"*/
-html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#housing div#roomlist p {
-    text-align: center;
-    padding-right: 25px;
+
+
+/*Chat Commands, Rules, Problem?!, FAQ*/
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div b {
+    color: red !important;
+    text-shadow: 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black;    
+    font-weight: normal !important;
+    font-size: 11pt !important;
+}
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div h4 {
+    color: yellow;
+    font-size: 12pt;
+    text-decoration: underline;
 }

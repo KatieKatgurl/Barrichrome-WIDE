@@ -20,6 +20,58 @@ html body div#holder div#middlesection.lrow div#main div#content div p {
     display: block !important;
 }
 
+/*level up and pet procs in battle screen*/
+span#levelgain {
+    color: white !important;
+    text-shadow: 0px 0px 1px silver, 0px 0px 1px silver, 0px 0px 1px silver !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    text-decoration: none !important;
+    
+}
+span.pet_proc {
+    color: white !important;
+    text-shadow: 0px 0px 1px silver, 0px 0px 1px silver, 0px 0px 1px silver !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    text-decoration: none !important;
+}
+
+/*exp multipliers*/
+span.bonus.double {
+    color: #fff !important;
+    text-shadow: 0px 0px 1px yellow, 0px 0px 1px yellow, 0px 0px 1px yellow !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    text-decoration: none !important;
+}
+span.bonus.triple {
+    color: #fff !important;
+    text-shadow: 0px 0px 1px #a400a4, 0px 0px 1px #a400a4, 0px 0px 1px #a400a4 !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    text-decoration: none !important;
+}
+span.bonus.quad {
+    color: #fff !important;
+    text-shadow: 0px 0px 1px #f00, 0px 0px 1px #f00, 0px 0px 1px #F00 !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    text-decoration: none !important;
+}
+span.bonus.dec {
+    color: #fff !important;
+    text-shadow: 0px 0px 2px #f0f, 0px 0px 2px #F0f, 0px 0px 2px #F0f !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    text-decoration: none !important;
+}
+html body div#holder div#middlesection.lrow div#main div#content div.lrow div.flex-content span {
+    font-style: normal !important;
+    font-weight: normal !important;
+    text-decoration: none !important;
+}
+
 #skills {
     font-size: 10px;
     padding: 5px;
@@ -311,8 +363,9 @@ div.lrow div.flex-content div.lrow div.strong.text-center.flex {
 div#stopauto.text-center.flex {
     margin-top: 0px;
     font-size: 12pt !important;
-    color: #EEE;
-    text-shadow: 0px 0px 1px #F00, 0px 0px 1px #F00, 0px 0px 1px #F00;
+    color: #f00 !important;
+    text-shadow: 1px 1px 2px #000, 1px 1px 2px #000, 1px 1px 2px #000 !important;
+    font-style: oblique;
 }
 /*dungeon autos remaining*/
 html body div#holder div#middlesection.lrow div#main div#content div.lrow div.flex-content div.strong.text-center {
@@ -428,7 +481,7 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
 }
 
 #chat {
-    background-color: #00000050;
+    background-color: #00000025;
     border: 3px;
     border-style: inset;
     border-color: silver !important;
@@ -532,6 +585,7 @@ html body div#holder div.lrow div#chat input#chatbutton {
     text-align: center;
     font-size: 10pt !important;
     cursor: pointer;
+    width: 100px;
 }
 
 
@@ -565,8 +619,8 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
 }
 
 /*Main Panels*/
-#side1 {
-    height: 381px;
+#side1 { /*left side*/
+    height: 380px;
     width: 50%;
     background-color: #00000000 !important;
     border: 3px;
@@ -577,8 +631,8 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
     text-align: left;
     color: #FFF;
 }
-#side2 {
-    height: 380px;
+#side2 { /*right side*/
+    height: 379px;
     width: 50%;
     background-color: #00000000 !important;
     border: 3px;
@@ -591,7 +645,7 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
 }
 
 #main {
-    background-color: #00000050;
+    background-color: #00000025;
     /*resize: vertical;
     overflow: auto;*/
     font-weight: normal;
@@ -695,7 +749,7 @@ div.panel-heading a {
     border-color: silver !important;
     box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
     border-radius: 12px;
-    margin-left: 2% !important;
+    margin-left: 0% !important;
 }
 /*header text*/
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div div.panel div.panel-heading {
@@ -722,6 +776,11 @@ html body div#popupcontainer div#popupholder div div div#popuprescontainer div#p
     background-color: #1c1c1c !important;
     border-radius: 7px 7px 0px 0px !important;
 }
+/*new panels updates*/
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div div.lrow div.flex div.panel,
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div div.lrow div.flex {
+    min-height: 120px;   
+}
 /*non-popup ui log*/
 html body div#holder div#middlesection.lrow div#main div#content div div.panel div.panel-heading.text-center {
     color: #fff !important;
@@ -739,7 +798,7 @@ html body div#holder div#middlesection.lrow div#main div#content div div.panel d
 #onlinecount {
     font-size: 10pt;
     color: #fff !important;
-    text-shadow: 0px 0px 1px silver !important;
+    text-shadow: 0px 0px 1px #f00, 0px 0px 1px #f00, 0px 0px 1px #f00 !important;
     font-style: normal;
     font-weight: normal;
 }
@@ -875,8 +934,8 @@ html body div#holder div#middlesection.lrow div#main div#content div div.panel d
     padding-left: 10px;
     text-align: right;
 }
-#eqgold {
-    padding-left: 18px;
+span#dp {
+    padding-left: 32px;
 }
 #jadeli {
     padding-left: 23px;
@@ -1048,8 +1107,9 @@ html body div#holder div#middlesection.lrow div#side1 div#questtracker a span#qu
 
 /*not enough money lol*/
 html body div#holder div#middlesection.lrow div#side2 div#equipstuff b {
-    color: #EAFF00 !important;
-    text-shadow: 0px 0px 2px #FF6200, 0 0 2px #FF4100, 0 0 2px #F00 !important;
+    font-size: 12pt;
+    color: #f00 !important;
+    text-shadow: 1px 1px 2px #000, 1px 1px 2px #000, 1px 1px 2px #000 !important;
 }
 /* Equipment costs subscreen */
 #equipstuff {
@@ -1216,7 +1276,10 @@ html body div#holder div#middlesection.lrow div#main div#content div#rightinfo i
     box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
     border-radius: 12px;
 }
-
+/*(Est) Money/hr*/
+html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div#profileinfo div#battle_data span#stat_mph {
+    width: auto !important;
+}
 /*bulk color text (fix colors when stylish gets updated)*/
 body {
     background-color: #323232 !important;
@@ -1581,11 +1644,25 @@ a:hover#ranking {
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div b {
     color: red !important;
     text-shadow: 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black;    
-    font-weight: normal !important;
+    font-weight: bold !important;
     font-size: 11pt !important;
 }
+/*commands window*/
 html body div#popupcontainer div#popupholder div div div#popuprescontainer div#popupresdisplay div#popup div h4 {
-    color: yellow;
-    font-size: 12pt;
-    text-decoration: underline;
+    background-image: url("https://i.imgur.com/9GXrGkY.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    width: 200px;
+    color: #fff !important;
+    text-shadow: 1px 1px 2px black, 1px 1px 2px black, 1px 1px 2px black !important;    
+    font-size: 13pt !important;
+    text-decoration: underline silver !important;
+    text-align: center;
+    padding-bottom:5px;
+    border:3px;
+    border-style: inset;
+    border-color: silver !important;
+    box-shadow: 0px 0px 1px #FFF, 0px 0px 2px #FFF, 0px 0px 1px #FFF !important;
+    border-radius: 12px;
 }
